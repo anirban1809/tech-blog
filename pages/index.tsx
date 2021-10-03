@@ -1,12 +1,27 @@
-import { NextPage } from 'next';
+import Footer from "../components/footer";
+import Banner from "../components/home/banner";
+import EditorsPick from "../components/home/editorpick";
+import Navbar from "../components/home/navbar";
+import TopCategory from "../components/home/topcategory";
+import Trending from "../components/home/trending";
 
-const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
-  <h1>Hello world from {process.env.NODE_ENV} - user agent: {userAgent}</h1>
-);
-
-Home.getInitialProps = async ({ req }) => {
-  const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent;
-  return { userAgent };
-};
+const Home = () => {
+  return <div className="">
+    <Navbar/>
+    <hr />
+    <Banner/>
+    <div className="flex mx-auto max-w-7xl ">
+      <EditorsPick/>
+      <Trending/>
+    </div>
+    <br />
+    <br />
+    <div className="flex mx-auto max-w-7xl ">
+      <TopCategory categoryName='Top Category 1'/>
+      <TopCategory categoryName="Top Category 2"/>
+    </div>
+    <Footer/>
+  </div>
+}
 
 export default Home;
