@@ -10,7 +10,7 @@ const editorpicks = [
 ];
 
 const EditorsPick = () => {
-    return <div className="" style={{ flex: 0.7 }}>
+    return <div className="" style={{ flex: 0.4 }}>
         <p className="py-5 text-gray-500 text-2xl">
             Editor's Pick
         </p>
@@ -18,18 +18,7 @@ const EditorsPick = () => {
             <div className="" style={{ flex: 1 }}>
                 <CardMedium bannerImage={editorpicks[0].bannerImage} author={editorpicks[0].author} title={editorpicks[0].title}/>
             </div>
-            <div className="flex px-7 flex-col justify-between" style={{ flex: 1 }}>
-                <div >
-                    <CardSmall />
-                </div>
-                <div >
-                    <CardSmall />
-                </div>
-                <div >
-                    <CardSmall />
-                </div>
 
-            </div>
         </div>
     </div>
 }

@@ -2,7 +2,7 @@ import React from "react";
 import CardSmall from "./card-small";
 
 const Trending = () =>
-    <div className="flex flex-col" style={{ flex: 0.3 }}>
+    <div className=" px-8 flex flex-col" style={{ flex: 0.6 }}>
         <p className="py-5 text-gray-500 text-2xl">
             Trending
         </p>
