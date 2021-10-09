@@ -1,9 +1,8 @@
-import React from 'react'
+const ArticleParagraph = (props: { content: string, editMode?:boolean }) => {
 
-const ArticleParagraph = (props: { content: string }) => {
     return (
-        <div className="text-2xl">
-            <p className="my-8">
+        <div className="text-2xl my-6">
+            <p contentEditable={props.editMode} suppressContentEditableWarning>
                 {props.content}
             </p>
         </div>

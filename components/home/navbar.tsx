@@ -8,7 +8,7 @@ const Navbar = () => {
                 <li className="mx-10 blue-vz text-xl cursor-pointer select-none">Contact</li>
             </ul>
             <ul className="flex py-5 mx-auto max-w-7xl ">
-                <li className="mx-10 blue-vz text-xl cursor-pointer select-none">Login</li>
+                <li className="mx-10 blue-vz text-xl cursor-pointer select-none">  <a href="/auth/login">Login</a></li>
                 <li className="mx-10 blue-vz text-xl cursor-pointer select-none">Sign Up</li>
             </ul>
         </div>

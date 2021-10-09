@@ -9,6 +9,11 @@
     "test:unit": "jest"
   },
   "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.3",
+    "@mui/material": "^5.0.3",
+    "firebase": "^9.1.2",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -17,17 +22,17 @@
     "@storybook/react": "^5.1.11",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.4",
+    "@types/react": "17.0.20",
     "@types/react-dom": "^16.9.0",
     "@types/storybook__react": "^4.0.2",
-    "fork-ts-checker-webpack-plugin": "^1.5.0",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.0.2",
-    "@types/react": "17.0.20",
     "autoprefixer": "^10.3.4",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "fork-ts-checker-webpack-plugin": "^1.5.0",
+    "jest": "^24.9.0",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.9",
+    "ts-jest": "^24.0.2",
     "typescript": "4.4.2"
   }
 }
