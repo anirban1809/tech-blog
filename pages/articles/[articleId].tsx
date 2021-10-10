@@ -1,6 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
 import React, { useEffect, useState } from 'react'
-import NotFoundPage from '../../components/fallbacks/404';
 import Navbar from '../../components/home/navbar';
 import SearchBar from '../../components/home/searchbar';
 import 'tailwindcss/tailwind.css'
@@ -8,15 +6,6 @@ import ArticleBanner from '../../components/article/articleBanner';
 import ArticleParagraph from '../../components/article/contents/paragraph';
 import ArticleImage from '../../components/article/contents/image';
 import EditIcon from '@mui/icons-material/Edit';
-
-const renderArticle = (contentItem: { type: 'paragraph' | 'image', content: 'string', caption?: string, key?: number }, editable?: boolean) => {
-    switch (contentItem.type) {
-        case 'paragraph':
-            return <ArticleParagraph content={contentItem.content} key={contentItem.key} editMode={editable} />
-        case 'image':
-            return <ArticleImage imgSource={contentItem.content} caption={contentItem.caption} key={contentItem.key} />
-    }
-}
 
 const article = {
     title: 'A beginner’s guide to TypeScript (with some history of the TypeScript)',
@@ -66,8 +55,6 @@ const article = {
 
 
 const Article = () => {
-    
-
     const [titleText, setTitleText] = useState('A beginner’s guide to TypeScript (with some history of the TypeScript)')
     const [editable,setEditable] = useState(false);
     useEffect(()=>{console.log(editable)},[editable]);
@@ -89,7 +76,7 @@ const Article = () => {
                         <p className="text-gray-500">Published {article.published}</p>
                     </div>
                     <div className="flex px-4 bg-green-600 rounded-md items-center text-white cursor-pointer" onClick={()=>setEditable(!editable)}>
-                        <EditIcon/><p className="text-center"> {!editable ? 'Edit Article' : 'Save Changes'} </p>
+                        <EditIcon/><p className="text-center"> {!editable ? 'Edit Article' : 'Save Changes and Publish'} </p>
                     </div>
                 </div>
 
